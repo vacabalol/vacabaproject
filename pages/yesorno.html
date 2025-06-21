@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Да или Нет</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    input {
+      width: 90%;
+      padding: 8px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+    }
+
+    #answer {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Задай вопрос</h2>
+    <input type="text" id="question" placeholder="Например: мне идти гулять?">
+    <br>
+    <button onclick="getAnswer()">Спросить</button>
+    <div id="answer"></div>
+  </div>
+
+  <script>
+    function getAnswer() {
+      const question = document.getElementById("question").value.trim();
+      const answerBox = document.getElementById("answer");
+
+      if (question === "") {
+        answerBox.textContent = "❗ Напиши вопрос!";
+        return;
+      }
+
+      const answers = ["Да", "Нет"];
+      const randomIndex = Math.floor(Math.random() * answers.length);
+      answerBox.textContent = `🔮 ${answers[randomIndex]}`;
+    }
+  </script>
+
+</body>
+</html>
