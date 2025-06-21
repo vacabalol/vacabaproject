@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'font1';
+  src: url('pages/styles/PoiretOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'font2';
+  src: url('pages/styles/PressStart2P-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+  body {
+    background: url('pages/styles/images/black.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.account {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);          
+    -webkit-backdrop-filter: blur(10px);  
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    font-family: 'font1';
+    color: white;
+}
+
+.namepassword input {
+    margin: 10px auto;
+    display: block;
+}
+
+.text {
+  font-family: 'font1';
+  border-radius: 12px;
+  font-size: 19px;
+  color: white;
+  background-color: #818a84;
+}
+
+.lolkek {
+  font-family: 'font2';
+  border-radius: 34px;
+  border: none;
+  font-size: 19px;
+  color: white;
+  background-color: #818a84;
+}
