@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'font2';
+    src: url('PressStart2P-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'font1';
+    src: url('PoiretOne-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  body {
+    background-image: url('https://www.zastavki.com/pictures/originals/2015/Backgrounds_Flag_Windows__green_background_107711_.jpg');
+    background: cover;
+    font-family: 'font1';
+    color: white;
+  }
+
+  .lolkek {
+    transition: 0.5s ease;
+    background-color: #6eeb7f80;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-family: 'font1';
+    color: white;
+    font-size: 20px;
+    border:  2px dashed rgb(167, 206, 165);
+    border-radius: 34px;
+    cursor: pointer;
+  }
+
+  .lolkek:active {
+    background-color: #08651480;
+    color: black;
+  }
