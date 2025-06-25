@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/yesorno.css">
+  <title>Да или Нет</title>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Задай вопрос</h2>
+    <input type="text" id="question" placeholder="Например: мне идти гулять?">
+    <br>
+    <button onclick="getAnswer()">Спросить</button>
+    <div id="answer"></div>
+  </div> <br/> <br/>
+  <a href="really.html">
+    <button class="hello">вернуться назад</button>
+  </a>
+
+  <script>
+    function getAnswer() {
+      const question = document.getElementById("question").value.trim();
+      const answerBox = document.getElementById("answer");
+
+      if (question === "") {
+        answerBox.textContent = "❗ Напиши вопрос!";
+        return;
+      }
+
+      const answers = ["Да", "Нет"];
+      const randomIndex = Math.floor(Math.random() * answers.length);
+      answerBox.textContent = `🔮 ${answers[randomIndex]}`;
+    }
+  </script>
+
+</body>
+</html>

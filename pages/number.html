@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рандомайзер чисел</title>
+  <link rel="stylesheet" href="styles/number.css">
+</head>
+<body>
+  <div class="box">
+    <h2>Рандомайзер чисел</h2>
+    <label>От <input type="number" id="min" min="0" max="999" value="0"> до <input type="number" id="max" min="0" max="999" value="25"></label>
+    <br>
+    <button onclick="generateRandom()">Сгенерировать</button>
+    <div id="result"></div>
+  </div>
+  <a href="really.html">
+    <button class="hello">вернуться назад</button>
+  </a>
+  <script>
+    function generateRandom() {
+      const min = parseInt(document.getElementById("min").value);
+      const max = parseInt(document.getElementById("max").value);
+
+      if (isNaN(min) || isNaN(max) || min > max || min < 0 || max > 999) {
+        document.getElementById("result").innerText = "❌ Введите корректные числа от 0 до 999";
+        return;
+      }
+
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById("result").innerText = `🎲 Случайное число: ${randomNumber}`;
+    }
+  </script>
+</body>
+</html>
